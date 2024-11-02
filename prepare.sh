@@ -68,6 +68,7 @@ if [[ $? != 0 ]]; then
 fi
 
 rm ./compressed_kernel.tar
+rm ./prepare.sh
 
 echo "Staging files to git and creating a commit (this may also take some time) ..."
 git add . &> /dev/null
