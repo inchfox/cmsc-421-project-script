@@ -30,21 +30,6 @@ if [[ $? != 0 ]]; then
   exit 1
 fi
 
-echo "Copy kernel into $REPO_NAME?"
-echo "Choose from: <y|n>"
-CHOICE="n"
-
-read CHOICE
-if [[ $CHOICE =~ (n|N) ]]; then
-  echo "ERROR: User denied copying linux kernel."
-  exit 1
-fi
-
-if ! [[ $CHOICE =~ (y|Y) ]]; then
-  echo "Error: invalid option $CHOICE"
-  exit 1
-fi
-
 echo "Compressing and transferring kernel ... please be patient."
 echo "THIS MIGHT TAKE SOME TIME, PLEASE DO NOT TERMINATE!"
 
