@@ -2,11 +2,10 @@
 
 echo $GLOB_REPO_DIR
 
-mkdir "$GLOB_REPO_DIR/kernelSpace"
 mkdir "$GLOB_REPO_DIR/userSpace"
-cp ./kernel-makefile "$GLOB_REPO_DIR/kernelSpace/Makefile"
 cp ./user-makefile "$GLOB_REPO_DIR/userSpace/Makefile"
+cp ./mk.c "$GLOB_REPO_DIR/userSpace/mkmemefs.c"
 
 cd "$GLOB_REPO_DIR"
 git add .
-git commit -m "(autocommit) - Kernel and User Space Makefiles"
+git commit -m "(autocommit) - User Space Files"
